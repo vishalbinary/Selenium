@@ -1,0 +1,19 @@
+{
+    "name": "Cystal Liu Yi Fie",
+    "designation": "Actress",
+    "department": "Holiwood",
+    "age": "25",
+    "id": "121212112",
+    "address":[
+    {
+    "city":"UK",
+    "pin":"203001",
+    "state":"LosAngles primary"    },{
+    
+    "city":"America",
+    "pin":"00007",
+    "state":"New Jersy secondary" 
+    }
+    
+    ]
+}
