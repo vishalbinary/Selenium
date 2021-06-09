@@ -6,7 +6,7 @@ public class POJO {
 	private String lastName;
 	private String designation;
 	private String department;
-	private Address []address;
+	private Address[] address;
 	public int getId() {
 		return id;
 	}

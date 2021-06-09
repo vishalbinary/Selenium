@@ -1,18 +1,19 @@
 {
-    "name": "Cystal Liu Yi Fie",
-    "designation": "Actress",
-    "department": "Holiwood",
-    "age": "25",
-    "id": "121212112",
+    "name": "Eddey",
+    "designation": "Fighter",
+    "department": "Tekken 3,4,7",
+    "age": "35",
+    "id":"{{id}}",
+    
     "address":[
     {
-    "city":"UK",
-    "pin":"203001",
-    "state":"LosAngles primary"    },{
+    "city":"Africa City",
+    "pin":"659865",
+    "state":"South Africa"    },{
     
-    "city":"America",
-    "pin":"00007",
-    "state":"New Jersy secondary" 
+    "city":"Tuna",
+    "pin":"01234",
+    "state":"Africa" 
     }
     
     ]

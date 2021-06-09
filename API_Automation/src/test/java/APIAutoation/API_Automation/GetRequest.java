@@ -38,7 +38,7 @@ public class GetRequest {
 
 	}
     //This method is used to hit the get request using id
-	public static void getRequestById(int id) {
+	public static void getRequestById(String id) {
 		response = given().contentType(ContentType.JSON).when().get("http://localhost:3000/TestApi" + "/" + id);
 		System.out.println("====getRequestById method is invoked====");
 
@@ -63,7 +63,7 @@ public class GetRequest {
 
 	}
 	//This method is used to put the json data
-	public static void putRequestById(JSONObject json, int id) {
+	public static void putRequestById(JSONObject json, String id) {
 		request=RestAssured.given().contentType(ContentType.JSON);
 		request.when().body(json.toString());//body data is sent to TestApi
 		response=request.put("http://localhost:3000/TestApi"+"/"+id);
@@ -76,13 +76,19 @@ public class GetRequest {
 	}
 	
    //This method is used to delete the data using id
-	public static void deleteRequestById(int id) {
+	public static void deleteRequestById(String id) {
 		request = RestAssured.given();
+		System.out.println("Deleted data is: ");
+		System.out.println("O__________________________________________O");
+	      getRequestById(id);
+		System.out.println("O___________________________________________O");
+
 		// Response response=request.when().delete("http://localhost:3000/TestApi");
 		Response response = request.when().delete("http://localhost:3000/TestApi" + "/" + id);
 		System.out.println("====deleteRequestById method is invoked====");
 		Assert.assertEquals(response.statusCode(), 200);
 		System.out.println("Data delete with id:" + id + " : " + response.getStatusLine());
+		
 
 	}
 

@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="4" total="5" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-05-17T05:57:58Z" name="Default suite" finished-at="2021-05-17T05:58:01Z" duration-ms="3188">
+  <suite started-at="2021-06-03T06:53:31Z" name="Default suite" finished-at="2021-06-03T06:53:37Z" duration-ms="5146">
     <groups>
     </groups>
-    <test started-at="2021-05-17T05:57:58Z" name="Default test" finished-at="2021-05-17T05:58:01Z" duration-ms="3188">
-      <class name="com.JSON.POJOClasses.PostRequestJSON">
-        <test-method signature="postRequest()[pri:0, instance:com.JSON.POJOClasses.PostRequestJSON@70e9c95d]" started-at="2021-05-17T11:27:58Z" name="postRequest" finished-at="2021-05-17T11:28:01Z" duration-ms="3150" status="PASS">
+    <test started-at="2021-06-03T06:53:31Z" name="Default test" finished-at="2021-06-03T06:53:37Z" duration-ms="5146">
+      <class name="APIAutoation.API_Automation.APIAutomationTestingTest">
+        <test-method signature="verifyGetRequest()[pri:0, instance:APIAutoation.API_Automation.APIAutomationTestingTest@2e6a8155]" started-at="2021-06-03T12:23:32Z" name="verifyGetRequest" finished-at="2021-06-03T12:23:37Z" duration-ms="5105" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- postRequest -->
-      </class> <!-- com.JSON.POJOClasses.PostRequestJSON -->
+        </test-method> <!-- verifyGetRequest -->
+      </class> <!-- APIAutoation.API_Automation.APIAutomationTestingTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
