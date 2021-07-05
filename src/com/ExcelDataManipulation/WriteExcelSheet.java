@@ -1,11 +1,10 @@
-//Program to write a xls file.
+//Program to write an xls file.
 package com.ExcelDataManipulation;
 
 import java.io.File;
 import java.util.Scanner;
 import jxl.Workbook;
 import jxl.write.Label;
-import jxl.write.WritableCell;
 import jxl.write.WritableSheet;
 import jxl.write.WritableWorkbook;
 
