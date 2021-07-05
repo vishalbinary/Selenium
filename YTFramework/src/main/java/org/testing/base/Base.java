@@ -24,8 +24,8 @@ public class Base {
 		driver=new ChromeDriver(option);		
 		driver.manage().deleteAllCookies();
 		driver.manage().window().maximize();
-		//driver.get("https://www.youtube.com/");		
-		driver.get("https://www.naukri.com/");
+		driver.get("https://www.youtube.com/");		
+		//driver.get("https://www.naukri.com/");
 		driver.manage().timeouts().pageLoadTimeout(40, TimeUnit.SECONDS);
 		driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
 		action=new Actions(driver);
