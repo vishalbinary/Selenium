@@ -1,0 +1,6 @@
+username=
+password=
+driverPath=../JPetStore_Automation_Demo/Drivers/geckodriver.exe
+
+
+url=https://petstore.octoperf.com/actions/Account.action;jsessionid=7508616E765E660B81D3A2DD0CB689A6?newAccountForm=
