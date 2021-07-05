@@ -5,8 +5,8 @@
     <classes>
       <class name="org.testing.TestScripts.TC5">
         <methods>
-          <include name="tearDown"/>
           <include name="setUp"/>
+          <include name="closeDriver"/>
           <include name="clickOnChannelSubs"/>
         </methods>
       </class> <!-- org.testing.TestScripts.TC5 -->

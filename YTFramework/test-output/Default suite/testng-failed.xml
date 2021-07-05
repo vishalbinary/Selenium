@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="org.testing.TestScripts.TC6">
+      <class name="org.testing.TestScripts.Switch">
         <methods>
           <include name="setUp"/>
-          <include name="tearDown"/>
-          <include name="commentVideo"/>
+          <include name="clickOnTrending"/>
+          <include name="closeDriver"/>
         </methods>
-      </class> <!-- org.testing.TestScripts.TC6 -->
+      </class> <!-- org.testing.TestScripts.Switch -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

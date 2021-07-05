@@ -1,84 +1,52 @@
+// Program to Like a video on Youtube
 package org.testing.TestScripts;
-
-import java.util.concurrent.TimeUnit;
+import java.io.IOException;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
+import org.testing.Assertion.Assertions;
+import org.testing.base.Base;
+import org.testing.pages.Login;
+import org.testing.pages.Logout;
+import org.testing.pages.PlayVideo;
+import org.testing.utilities.LogsCapture;
+import org.testing.utilities.Screenshot;
 import org.testng.annotations.Test;
 
-public class TC4 {
-	WebDriver driver;
-
-	@BeforeMethod
-	public void setUp() {
-		System.setProperty("webdriver.chrome.driver", "../YTFramework/chromedriver.exe");
-		ChromeOptions option=new ChromeOptions();
-		option.addArguments("--disable-notifications");		
-		driver=new ChromeDriver(option);
-		driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
-		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		driver.manage().window().maximize();
-		driver.get("https://www.youtube.com/");		
-		System.out.println("Browser is Launched");
-
-          }
+public class TC4 extends Base{
+	String expectedURL="https://www.youtube.com/watch?v=LT1-bB9kGGA";
+	String expectedUser="peeter parker";
+	
 	@Test
 	public void clickOnLike() throws InterruptedException {
-		WebElement sinInBtn=driver.findElement(By.xpath("//*[ @id='text' and @class='style-scope ytd-button-renderer style-suggestive size-small']"));
-		Thread.sleep((2000));
-		sinInBtn.click();
-		Thread.sleep((2000));
-		
-		//for email id
-		WebElement email=driver.findElement(By.xpath("//input[@type='email' and @aria-label='Email or phone']"));
-		email.clear();
-		email.sendKeys("peeterparkerbinary@gmail.com");
-		WebElement submitBtn=driver.findElement(By.xpath("//button/span[contains(text(),'Next')]"));
-	submitBtn.click();
-	Thread.sleep((2000));
-	
-	//for password
-	WebElement password=driver.findElement(By.xpath("//input[@type='password'and @aria-label='Enter your password']"));
-	password.clear();
-	password.sendKeys("peeter@#7");
-	WebElement nextBtn=driver.findElement(By.xpath("//span[contains(text(),'Next')]"));
-	nextBtn.click();
-	Thread.sleep(3000);// wait after login for 3 secs
-	
-	//click on a video
-	WebElement clickVideo=driver.findElement(By.xpath("//*[@id='video-title']"));
-	clickVideo.click();
+		new Login().login();
+		driver.findElement(By.xpath(pro.getProperty("icon"))).click();
+		String actualUser=driver.findElement(By.xpath(pro.getProperty("userName"))).getText();	
+		Assertions.myAssertion(actualUser, expectedUser);
+		action.sendKeys(Keys.ESCAPE).perform();
+				
+	PlayVideo.play();
 	Thread.sleep(3000);
 	
-	//click on a Like video
-	WebElement like=driver.findElement(By.xpath("//div/div[3]//ytd-menu-renderer/div[2]/ytd-toggle-button-renderer[1]//yt-icon-button//yt-icon"));//side bar
-	like.click();
+	
+	//click on Like button on youtube
+	WebElement likeVideo=
+			driver.findElement(By.xpath(pro.getProperty("likeVideo").trim()));//side bar
+	likeVideo.click();
 	Thread.sleep(3000);
+	Assertions.myAssertion(driver.getCurrentUrl(), expectedURL);
+	//Screenshot Captured
+		try {
+			Screenshot.takeScreenShot("../YTFramework/Screenshots/"+this.getClass().getName()+".png");
+		} catch (IOException e) {
+			
+			e.printStackTrace();
+		}
 	
-	//process to logout
-	WebElement icon=driver.findElement(By.xpath("//img[@id='img' and @class='style-scope yt-img-shadow' and @alt='Avatar image']"));
-	icon.click();
-	WebElement signOut=driver.findElement(By.xpath("//div/*[contains(text(),'Sign out')]"));
-	signOut.click();
-	System.out.println("TC4=Clicked on a Like button on Youtube");
-		
-		
-		
-		
-	}
-	@AfterMethod
-	public void tearDown() throws InterruptedException {
-		Thread.sleep(2000);
-		driver.close();
-		System.out.println("Browser is Closed");
 
-		
+	System.out.println("TC4=Clicked on a Like button on Youtube");		
+	Logout.logout();
+	LogsCapture.takesLog("My Log is Ready! ", this.getClass().getName());
 	}
-
-	
 }

@@ -1,0 +1,80 @@
+
+sinInBtn=//*[ @id='text' and @class='style-scope ytd-button-renderer style-suggestive size-small']
+
+//sinInBtn=//tp-yt-paper-button[@role='button' and @aria-label='Sign in']/yt-formatted-string[contains(text(),'Sign in')]
+
+email=//input[@type='email' and @aria-label='Email or phone']
+
+userName=//div/yt-formatted-string[contains(text(),'peeter parker')]
+submitBtn=//button/span[contains(text(),'Next')]
+
+pass=//input[@type='password'and @aria-label='Enter your password']
+
+nextBtn=//span[contains(text(),'Next')]
+=====================================================================
+Trending Xpath
+======================================================================
+
+icon=//img[@id='img' and @class='style-scope yt-img-shadow' and @alt='Avatar image']
+
+signOut=//div/*[contains(text(),'Sign out')]
+
+explore=//a/*/yt-formatted-string[contains(text(),'Explore')]
+
+trending=//div/yt-formatted-string[contains(text(),'Trending')]
+
+=====================================================================
+History Xpath
+======================================================================
+history=//a/*/yt-formatted-string[contains(text(),'History')]
+
+=====================================================================
+subscribe Xpath
+======================================================================
+
+subscribe=//a/*/yt-formatted-string[contains(text(),'Subscriptions')]
+
+=====================================================================
+clickVideo Xpath
+======================================================================
+clickVideo=//*[@id='video-title']
+
+=====================================================================
+likeVideo Xpath
+======================================================================
+likeVideo=//div/div[3]//ytd-menu-renderer/div[2]/ytd-toggle-button-renderer[1]//yt-icon-button//yt-icon
+
+=====================================================================
+subscribeChannel Xpath
+======================================================================
+subscribeChannel=//ytd-video-secondary-info-renderer//ytd-subscribe-button-renderer//yt-formatted-string
+
+=====================================================================
+comment Xpath
+======================================================================
+comment=//div/yt-formatted-string[contains(text(),'Add a public comment...')]
+
+=====================================================================
+commentVideo Xpath
+======================================================================
+commentVideo=div#contenteditable-root
+
+=====================================================================
+submitComment Xpath
+======================================================================
+submitComment=//tp-yt-paper-button[@id='button']/yt-formatted-string[contains(text(),'Comment')]
+
+=====================================================================
+Save+ Xpath
+======================================================================
+Save+=//div[3]/div/ytd-menu-renderer/div[2]/*/*/yt-formatted-string[contains(text(),'Save')]
+
+=====================================================================
+watchLater Xpath
+======================================================================
+watchLater=//div[@id='checkboxContainer' and @class='style-scope tp-yt-paper-checkbox']
+
+=====================================================================
+library Xpath
+======================================================================
+library=//a/*/yt-formatted-string[contains(text(),'Library')]

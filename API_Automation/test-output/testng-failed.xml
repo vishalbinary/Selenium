@@ -5,7 +5,7 @@
     <classes>
       <class name="APIAutoation.API_Automation.APIAutomationTestingTest">
         <methods>
-          <include name="verifyDeleteRequestTest"/>
+          <include name="verifyGetRequest"/>
         </methods>
       </class> <!-- APIAutoation.API_Automation.APIAutomationTestingTest -->
     </classes>
